@@ -6,11 +6,13 @@ matrix:
 
 install:
   - go get github.com/mjibson/esc
+  - go get github.com/kardianos/govendor
 
 script:
   - mkdir bin
   - cd ./bin
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/mjibson/esc
+  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/kardianos/govendor
   
 after_script:
   - cd ./
