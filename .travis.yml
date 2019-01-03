@@ -37,7 +37,7 @@ script:
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/golang/lint/golint
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/derekparker/delve/cmd/dlv
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/godoc
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/saibing/bingo
+  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GO111MODULE=on go build github.com/saibing/bingo
   
 after_script:
   - cd ./
