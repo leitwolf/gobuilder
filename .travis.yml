@@ -15,9 +15,7 @@ install:
   - go get golang.org/x/tools/cmd/gorename
   - go get github.com/sqs/goreturns
   - go get github.com/rogpeppe/godef
-  - go get github.com/golang/lint/golint
   - go get github.com/derekparker/delve/cmd/dlv
-  - go get golang.org/x/tools/cmd/godoc
   - go get github.com/saibing/bingo
 
 script:
@@ -33,10 +31,7 @@ script:
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/gorename
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/sqs/goreturns
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/rogpeppe/godef
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/golang/lint/golint
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/golang/lint/golint
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/derekparker/delve/cmd/dlv
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/godoc
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GO111MODULE=on go build github.com/saibing/bingo
   
 after_script:
