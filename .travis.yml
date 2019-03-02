@@ -7,7 +7,7 @@ matrix:
 install:
   - go get github.com/mjibson/esc
   - go get github.com/kardianos/govendor
-  - go get github.com/mdempsky/gocode
+  - go get github.com/stamblerre/gocode
   - go get github.com/ramya-rao-a/go-outline
   - go get github.com/acroca/go-symbols
   - go get github.com/uudashr/gopkgs/cmd/gopkgs
@@ -23,7 +23,7 @@ script:
   - cd ./bin
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/mjibson/esc
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/kardianos/govendor
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/mdempsky/gocode
+  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/stamblerre/gocode
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/ramya-rao-a/go-outline
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/acroca/go-symbols
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/uudashr/gopkgs/cmd/gopkgs
