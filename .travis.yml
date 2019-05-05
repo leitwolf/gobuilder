@@ -17,6 +17,7 @@ install:
   - go get github.com/rogpeppe/godef
   - go get github.com/derekparker/delve/cmd/dlv
   - go get github.com/saibing/bingo
+  - go get golang.org/x/tools/cmd/gopls
 
 script:
   - mkdir bin
@@ -33,6 +34,7 @@ script:
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/rogpeppe/godef
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/derekparker/delve/cmd/dlv
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GO111MODULE=on go build github.com/saibing/bingo
+  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/gopls
   
 after_script:
   - cd ./
