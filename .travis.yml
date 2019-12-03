@@ -6,34 +6,12 @@ matrix:
 
 install:
   - go get github.com/mjibson/esc
-  - go get github.com/kardianos/govendor
-  - go get github.com/stamblerre/gocode
-  - go get github.com/ramya-rao-a/go-outline
-  - go get github.com/acroca/go-symbols
-  - go get github.com/uudashr/gopkgs/cmd/gopkgs
-  - go get golang.org/x/tools/cmd/guru
-  - go get golang.org/x/tools/cmd/gorename
-  - go get github.com/sqs/goreturns
-  - go get github.com/rogpeppe/godef
-  - go get github.com/derekparker/delve/cmd/dlv
-  - go get github.com/saibing/bingo
   - go get golang.org/x/tools/cmd/gopls
 
 script:
   - mkdir bin
   - cd ./bin
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/mjibson/esc
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/kardianos/govendor
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/stamblerre/gocode
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/ramya-rao-a/go-outline
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/acroca/go-symbols
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/uudashr/gopkgs/cmd/gopkgs
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/guru
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/gorename
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/sqs/goreturns
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/rogpeppe/godef
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/derekparker/delve/cmd/dlv
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GO111MODULE=on go build github.com/saibing/bingo
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/gopls
   
 after_script:
