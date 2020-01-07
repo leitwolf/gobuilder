@@ -6,13 +6,13 @@ matrix:
 
 install:
   - go get github.com/mjibson/esc
-  - go get golang.org/x/tools/cmd/gopls
+  - go get github.com/golang/tools/gopls
 
 script:
   - mkdir bin
   - cd ./bin
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/mjibson/esc
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/cmd/gopls
+  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/golang/tools/gopls
   
 after_script:
   - cd ./
