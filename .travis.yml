@@ -7,14 +7,14 @@ matrix:
 install:
   - go get github.com/mjibson/esc
   - go get golang.org/x/tools/gopls
-  - go get github.com/hallazzang/syso
+  - go get github.com/hallazzang/syso/...
 
 script:
   - mkdir bin
   - cd ./bin
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/mjibson/esc
   - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build golang.org/x/tools/gopls
-  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/hallazzang/syso
+  - CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build github.com/hallazzang/syso/...
   
 after_script:
   - cd ./
